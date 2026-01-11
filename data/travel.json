@@ -1,0 +1,26 @@
+[
+  {
+    "city": "mangaluru",
+    "area": "bondel",
+    "mode": "Auto Rickshaw",
+    "time": "15 – 20 mins",
+    "cost": "₹80 – ₹120",
+    "from": "Railway Station"
+  },
+  {
+    "city": "mangaluru",
+    "area": "bondel",
+    "mode": "Bus",
+    "time": "30 – 35 mins",
+    "cost": "₹20 – ₹30",
+    "from": "Central Bus Stand"
+  },
+  {
+    "city": "mangaluru",
+    "area": "bondel",
+    "mode": "Cab",
+    "time": "15 mins",
+    "cost": "₹150 – ₹250",
+    "from": "Any Location"
+  }
+]
