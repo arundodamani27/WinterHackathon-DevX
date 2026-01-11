@@ -6,7 +6,6 @@ It shows the exam centre location, nearby PG/hostels/hotels, and travel guidance
 
 This platform is for:
 - Competitive exam aspirants (SSC, UPSC, Banking, etc.)
-- University exam students
 - Anyone attending exams outside their hometown
 
 ---
@@ -30,8 +29,6 @@ This platform is for:
 ---
 
 ## Google Technologies Used
-> ⚠️ Using Google products is mandatory for this hackathon.
-
 - **Firebase Firestore** – To store exam centres, stay details, and travel guidance data
 - **Google Maps (Redirect link)** – For real-time navigation to exam centres
 
