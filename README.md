@@ -1,42 +1,41 @@
-# ExamRoute – Smart Exam Travel & Stay Assistant
+# ExamRoute – Exam Travel & Stay Assistant
 
 ## Description
-ExamRoute is a web application built to help students who are attending exams in other cities.  
-It shows the exam centre location, nearby PG/hostels/hotels, and travel guidance so that students can plan their stay and travel easily without last-minute confusion.
+ExamRoute is a web platform that helps students find their exam centre location, nearby PGs/hostels/hotels, and travel guidance in one place.  
+It solves the problem of last-minute confusion when students travel to new cities for exams.  
+This platform is built for competitive exam candidates and students attending exams in unfamiliar cities.
 
 This platform is for:
-- Competitive exam aspirants (SSC, UPSC, Banking, etc.)
-- Anyone attending exams outside their hometown
 
----
+Competitive exam aspirants (SSC, UPSC, Banking, etc.)
+Anyone attending exams outside their hometown
 
 ## Features
-- Search exam centre by city and centre name
-- View exam centre location on map
-- Find nearby PG, hostels and hotels
-- Get travel guidance for reaching the exam centre
-- Google Maps redirect for real-time navigation
-- Mobile responsive design
-
----
+- Exam Centre Locator – Search exam city and centre to view location on map  
+- Nearby Stays Finder – Shows PGs, hostels and hotels near the exam centre  
+- Travel Guide – Provides route, transport mode and guidance to reach the centre  
 
 ## Tech Stack
-- **Frontend:** HTML, CSS, JavaScript  
-- **Backend:** Firebase Firestore  
-- **Maps:** OpenStreetMap + Leaflet.js  
-- **Version Control:** Git & GitHub  
-
----
+- HTML5 – Structure of the web pages  
+- CSS3 – Styling and responsive design  
+- JavaScript – Frontend logic and interactions  
+- Firebase Firestore – Backend database  
+- Leaflet.js – Map rendering using OpenStreetMap    
 
 ## Google Technologies Used
-- **Firebase Firestore** – To store exam centres, stay details, and travel guidance data
-- **Google Maps (Redirect link)** – For real-time navigation to exam centres
-
----
+- **Firebase Firestore** – To store and manage exam centres, stays and travel data in real time  
+- **Google Maps API** – To show exact exam centre locations and enable navigation  
+- **Google Cloud Platform** – For API management and scalability  
 
 ## Setup Instructions
 Steps to run the project locally:
-
 1. Clone the repository  
-   ```bash
-   git clone https://github.com/<arundodamani27>/WinterHackathon-DevX.git
+2. Open the project folder in VS Code  
+3. Add Firebase configuration in `firebase.js`  
+4. Run using Live Server or open `index.html` in browser  
+
+## Team Members
+- Arun  
+- Jaison  
+- Dhanvith  
+- Hithesh
