@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>ExamRoute – Smart Exam Travel & Stay Assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Leaflet Map CSS (for result page later) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo">ExamRoute</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Add Info</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN WRAPPER -->
+  <div class="main-wrapper">
+
+    <!-- HERO SECTION -->
+    <div class="hero-text">
+      <span class="badge">Your Exam Companion</span>
+      <h1>Find Your Perfect <span>Exam Stay</span></h1>
+      <p class="hero-subtitle">
+        Discover nearby accommodation and seamless travel routes to your exam center in any city.
+      </p>
+    </div>
+
+    <!-- SEARCH CARD -->
+    <div class="home-container">
+
+      <div class="search-box">
+
+        <!-- City -->
+        <select id="citySelect">
+          <option value="">Select Exam City</option>
+          <option value="Bengaluru">Bengaluru</option>
+          <option value="Mangaluru">Mangaluru</option>
+          <option value="Mysuru">Mysuru</option>
+          <option value="Hubballi">Hubballi</option>
+        </select>
+
+        <!-- Exam Centre -->
+        <input
+          type="text"
+          id="examCentreInput"
+          placeholder="Enter Exam Centre Name (as per admit card)"
+        />
+
+        <!-- Button -->
+        <button id="findBtn">Find Stay & Travel</button>
+
+      </div>
+
+      <div class="add-info">
+        <a href="#">+ Add missing stay or travel info</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FIREBASE INIT -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDam8hDxPIK32eA_d6x2HUsryfGcYGEEso",
+      authDomain: "examroute-2c382.firebaseapp.com",
+      projectId: "examroute-2c382",
+      storageBucket: "examroute-2c382.appspot.com",
+      messagingSenderId: "9052235272",
+      appId: "1:9052235272:web:ea06ccdb07a8a6ed093bd"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    window.db = getFirestore(app);
+  </script>
+
+  <!-- BUTTON LOGIC -->
+  <script>
+    document.getElementById("findBtn").addEventListener("click", function () {
+      const city = document.getElementById("citySelect").value;
+      const centre = document.getElementById("examCentreInput").value;
+
+      if (!city || !centre) {
+        alert("Please select city and enter exam centre name");
+        return;
+      }
+
+      window.location.href = `result.html?city=${encodeURIComponent(city)}&centre=${encodeURIComponent(centre)}`;
+    });
+  </script>
+
+</body>
+</html>
