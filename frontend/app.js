@@ -103,7 +103,7 @@ findBtn.addEventListener("click", async () => {
             
                 const imageHTML = stay.image
                     ? `<img src="${stay.image}" alt="${stay.name}" class="stay-image" onerror="this.outerHTML='<div class=\\'stay-image\\'>🏨</div>'">`
-                    : `<div class="stay-image">🏨</div>`;
+                    : `<div class="stay-image"></div>`;
 
                
                 const ratingHTML = stay.rating
@@ -132,11 +132,11 @@ findBtn.addEventListener("click", async () => {
                             <div class="stay-bottom">
                                 <div class="stay-meta">
                                     <div class="meta-item">
-                                        <span class="meta-icon">📍</span>
+                                        <span class="meta-icon"></span>
                                         <span>${stay.distance}</span>
                                     </div>
                                     <div class="meta-item">
-                                        <span class="meta-icon">📞</span>
+                                        <span class="meta-icon"></span>
                                         <span>${stay.contact}</span>
                                     </div>
                                 </div>
@@ -158,7 +158,7 @@ findBtn.addEventListener("click", async () => {
                 // Use image if available, otherwise show placeholder
                 const imageHTML = stay.image
                     ? `<img src="${stay.image}" alt="${stay.name}" class="stay-image" onerror="this.outerHTML='<div class=\\'stay-image\\'>🏨</div>'">`
-                    : `<div class="stay-image">🏨</div>`;
+                    : `<div class="stay-image"></div>`;
 
                 // Generate star rating if available
                 const ratingHTML = stay.rating
@@ -188,11 +188,11 @@ findBtn.addEventListener("click", async () => {
                             <div class="stay-bottom">
                                 <div class="stay-meta">
                                     <div class="meta-item">
-                                        <span class="meta-icon">📍</span>
+                                        <span class="meta-icon"></span>
                                         <span>${stay.distance}</span>
                                     </div>
                                     <div class="meta-item">
-                                        <span class="meta-icon">📞</span>
+                                        <span class="meta-icon"></span>
                                         <span>${stay.contact}</span>
                                     </div>
                                 </div>
@@ -215,8 +215,8 @@ findBtn.addEventListener("click", async () => {
                 travelResults.innerHTML += `
                     <div class="travel-card">
                         <div class="travel-mode">${travel.mode}</div>
-                        <div class="travel-info">📍 From: ${travel.from}</div>
-                        <div class="travel-info">⏱️ ${travel.time} | 💰 ${travel.cost}</div>
+                        <div class="travel-info"> From: ${travel.from}</div>
+                        <div class="travel-info"> ${travel.time} |  ${travel.cost}</div>
                     </div>
                 `;
             });
