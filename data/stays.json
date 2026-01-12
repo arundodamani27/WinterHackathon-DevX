@@ -1,0 +1,29 @@
+[
+  {
+    "city": "mangaluru",
+    "area": "bondel",
+    "name": "Student Lodge",
+    "type": "Hostel",
+    "distance": "500 m",
+    "price": "₹300 – ₹600",
+    "contact": "+91 98765 43210"
+  },
+  {
+    "city": "mangaluru",
+    "area": "bondel",
+    "name": "Bondel PG for Boys",
+    "type": "PG",
+    "distance": "800 m",
+    "price": "₹500 – ₹800",
+    "contact": "+91 91234 56789"
+  },
+  {
+    "city": "mangaluru",
+    "area": "bondel",
+    "name": "Budget Inn",
+    "type": "Hotel",
+    "distance": "1.2 km",
+    "price": "₹900 – ₹1400",
+    "contact": "+91 99887 66554"
+  }
+]

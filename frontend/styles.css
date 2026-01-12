@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: #fafafa;
+    color: #1a1a1a;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.header {
+    background: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.brand h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
+}
+
+.brand p {
+    font-size: 0.8rem;
+    color: #737373;
+    font-weight: 400;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav a {
+    color: #525252;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: #1a1a1a;
+}
+
+.cta-button {
+    background: #1a1a1a;
+    color: white !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.cta-button:hover {
+    background: #000000;
+    color: white !important;
+}
+
+.search-section {
+    background: #ffffff;
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+}
+
+.search-section h2 {
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #404040;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 6px;
+    border: 1px solid #d4d4d4;
+    font-size: 0.9375rem;
+    transition: all 0.2s ease;
+    background: #ffffff;
+    color: #1a1a1a;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    outline: none;
+    border-color: #1a1a1a;
+}
+
+.form-group p {
+    font-size: 0.8125rem;
+    color: #737373;
+    margin-top: 6px;
+}
+
+#findBtn {
+    width: 100%;
+    padding: 13px;
+    background: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: all 0.2s ease;
+}
+
+#findBtn:hover {
+    background: #000000;
+}
+
+.result-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.result-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 32px;
+    margin-bottom: 20px;
+    border: 1px solid #e5e5e5;
+}
+
+.result-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.stay-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 16px;
+    background: #fafafa;
+    transition: all 0.2s ease;
+}
+
+.stay-card:hover {
+    border-color: #1a1a1a;
+    background: #ffffff;
+}
+
+.stay-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+.stay-type {
+    display: inline-block;
+    background: #f5f5f5;
+    color: #404040;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.stay-info {
+    font-size: 0.875rem;
+    margin-top: 8px;
+    color: #525252;
+    line-height: 1.6;
+}
+
+.stay-contact {
+    font-size: 0.875rem;
+    margin-top: 10px;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.travel-card {
+    border-left: 3px solid #1a1a1a;
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    transition: all 0.2s ease;
+}
+
+.travel-card:hover {
+    background: #ffffff;
+}
+
+.travel-mode {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.travel-info {
+    font-size: 0.875rem;
+    margin-top: 6px;
+    color: #525252;
+    line-height: 1.6;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.search-box input {
+    padding: 12px 14px;
+    width: 70%;
+    border: 1px solid #d4d4d4;
+    border-radius: 6px 0 0 6px;
+    font-size: 0.9375rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.search-box input:focus {
+    border-color: #1a1a1a;
+}
+
+.search-box button {
+    padding: 12px 20px;
+    background: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.search-box button:hover {
+    background: #000000;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 15px;
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+}
+
+.footer {
+    text-align: center;
+    font-size: 0.8125rem;
+    padding: 40px 20px;
+    color: #737373;
+    background: #ffffff;
+    margin-top: 60px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer p {
+    margin: 6px 0;
+    line-height: 1.6;
+}
+
+.footer strong {
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+@media (min-width: 768px) {
+    .result-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .result-card:last-child {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        padding: 0.875rem 1rem;
+    }
+
+    .brand h1 {
+        font-size: 1.25rem;
+    }
+
+    .brand p {
+        font-size: 0.75rem;
+    }
+
+    .nav {
+        gap: 1.25rem;
+        font-size: 0.85rem;
+    }
+
+    .search-section {
+        margin: 30px 15px;
+        padding: 30px 24px;
+    }
+
+    .result-section {
+        padding: 0 15px;
+    }
+
+    .search-box input {
+        width: 60%;
+    }
+}
