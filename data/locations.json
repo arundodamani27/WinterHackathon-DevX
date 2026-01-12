@@ -1,0 +1,26 @@
+[
+  {
+    "city": "mangaluru",
+    "area": "bondel",
+    "name": "Swaadh",
+    "type": "Restraunt",
+    "distance": "500 m",
+    "contact": "+91 98765 43210"
+  },
+   {
+    "city": "mangaluru",
+    "area": "bondel",
+    "name": "Coffee Day",
+    "type": "Cafe",
+    "distance": "600 m",
+    "contact": "+91 98765 43210"
+  },
+   {
+    "city": "mangaluru",
+    "area": "bondel",
+    "name": "Star Restraunt",
+    "type": "Restraunt",
+    "distance": "800 m",
+    "contact": "+91 98765 43210"
+  }
+]

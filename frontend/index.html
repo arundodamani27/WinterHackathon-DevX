@@ -20,6 +20,8 @@
 </head>
 
 <body>
+
+
     <header class="header">
         <h1>ExamStay</h1>
         <p>Plan your exam travel and stay easily</p>
@@ -50,19 +52,24 @@
 
     <section class="result-section" id="resultSection" style="display:none;">
 
+
         <div class="result-card">
-            <h3>Nearby Hotel & Stay</h3>
+            <h3>🏨 Nearby Hotel & Stay</h3>
             <div id="stayResults"></div>
         </div>
 
 
         <div class="result-card">
-            <h3>Travel Guidance</h3>
+            <h3>🚌 Travel Guidance</h3>
             <div id="travelResults"></div>
+        </div>
+        <div class="result-card">
+            <h3>🍽️ Nearby Restaurants</h3>
+            <div id="restrauntResults"></div>
         </div>
 
         <div class="result-card">
-            <h3>Exam Location Map</h3>
+            <h3>🗺️ Exam Location Map</h3>
 
             <div class="search-box">
                 <input type="text" id="examCentreInput" placeholder="Enter Exam Centre" />
@@ -81,8 +88,10 @@
             This platform is intended to assist exam candidates.
         </p>
     </footer>
+
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="app.js"></script>
+
 </body>
 
 </html>
