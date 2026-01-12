@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
     <style>
+
         #map {
             height: 350px;
             width: 100%;
@@ -20,22 +21,17 @@
 </head>
 
 <body>
+
+
     <header class="header">
-        <div class="header-content">
-            <div class="brand">
-                <h1>ExamStay</h1>
-                <p>Plan your exam travel and stay easily</p>
-            </div>
-            <nav class="nav">
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <a href="#book" class="cta-button">Book Now</a>
-            </nav>
-        </div>
+        <h1>ExamStay</h1>
+        <p>Plan your exam travel and stay easily</p>
     </header>
+
 
     <section class="search-section">
         <h2>Find Exam Location Details</h2>
+
         <div class="form-group">
             <label for="city">Exam City</label>
             <select id="city">
@@ -45,41 +41,54 @@
                 <option value="mysuru">Mysuru</option>
             </select>
         </div>
+
         <div class="form-group">
             <label for="area">Exam Location / Area</label>
             <input type="text" id="area" placeholder="Example: Bondel" />
-            <p>Enter the locality or area name where your exam center is located</p>
         </div>
+
         <button id="findBtn">Find Stay & Travel Details</button>
     </section>
 
+
     <section class="result-section" id="resultSection" style="display:none;">
+
+
         <div class="result-card">
-            <h3>Nearby Hotels & Stay</h3>
+            <h3>🏨 Nearby Hotel & Stay</h3>
             <div id="stayResults"></div>
         </div>
+
+
         <div class="result-card">
-            <h3>Travel Guidance</h3>
+            <h3>🚌 Travel Guidance</h3>
             <div id="travelResults"></div>
         </div>
+
         <div class="result-card">
-            <h3>Exam Location Map</h3>
+            <h3>🗺️ Exam Location Map</h3>
+
             <div class="search-box">
                 <input type="text" id="examCentreInput" placeholder="Enter Exam Centre" />
                 <button id="searchBtn">Find Location</button>
             </div>
+
             <div id="map"></div>
         </div>
+
     </section>
 
+
     <footer class="footer">
-        <p><strong>Important Note:</strong> All prices, distances, and travel times are approximate and may vary.</p>
-        <p>Please verify details directly with accommodation providers before booking.</p>
-        <p style="margin-top: 15px;">Made for exam candidates | © 2026 ExamStay</p>
+        <p>
+            Prices and distances shown are approximate.
+            This platform is intended to assist exam candidates.
+        </p>
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="app.js"></script>
+
 </body>
 
 </html>

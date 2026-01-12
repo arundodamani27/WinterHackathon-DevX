@@ -83,9 +83,9 @@ findBtn.addEventListener("click", async () => {
                     <div class="stay-card">
                         <div class="stay-title">${stay.name}</div>
                         <span class="stay-type">${stay.type}</span>
-                        <div class="stay-info"> ${stay.distance}</div>
-                        <div class="stay-info"> ${stay.price}</div>
-                        <div class="stay-contact"> ${stay.contact}</div>
+                        <div class="stay-info">📍 ${stay.distance}</div>
+                        <div class="stay-info">💰 ${stay.price}</div>
+                        <div class="stay-contact">📞 ${stay.contact}</div>
                     </div>
                 `;
             });
