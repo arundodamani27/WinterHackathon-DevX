@@ -5,10 +5,6 @@ ExamRoute is a web platform that helps students find their exam centre location,
 It solves the problem of last-minute confusion when students travel to new cities for exams.  
 This platform is built for competitive exam candidates and students attending exams in unfamiliar cities.
 
-This platform is for:
-
-Competitive exam aspirants (SSC, UPSC, Banking, etc.)
-Anyone attending exams outside their hometown
 
 ## Features
 - Exam Centre Locator – Search exam city and centre to view location on map  
