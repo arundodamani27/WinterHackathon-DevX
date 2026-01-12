@@ -22,5 +22,61 @@
     "time": "15 mins",
     "cost": "₹150 – ₹250",
     "from": "Any Location"
+  },
+   {
+    "city": "bengaluru",
+    "area": "indiranagar",
+    "mode": "Cab",
+    "time": "20 – 30 mins",
+    "cost": "₹200 – ₹400",
+    "from": "Any Location"
+  },
+  {
+    "city": "bengaluru",
+    "area": "whitefield",
+    "mode": "Cab",
+    "time": "35 – 50 mins",
+    "cost": "₹300 – ₹550",
+    "from": "Any Location"
+  },
+  {
+    "city": "bengaluru",
+    "area": "electronic city",
+    "mode": "Cab",
+    "time": "45 – 60 mins",
+    "cost": "₹400 – ₹700",
+    "from": "Any Location"
+  },
+  {
+    "city": "bengaluru",
+    "area": "majestic",
+    "mode": "Metro",
+    "time": "25 – 35 mins",
+    "cost": "₹40 – ₹60",
+    "from": "Any Location"
+  },
+  {
+    "city": "bengaluru",
+    "area": "yelahanka",
+    "mode": "Bus",
+    "time": "50 – 70 mins",
+    "cost": "₹30 – ₹50",
+    "from": "Any Location"
+  },
+  {
+    "city": "bengaluru",
+    "area": "koramangala",
+    "mode": "Auto",
+    "time": "25 – 40 mins",
+    "cost": "₹150 – ₹300",
+    "from": "Any Location"
+  },
+  {
+    "city": "bengaluru",
+    "area": "jayanagar",
+    "mode": "Metro",
+    "time": "20 – 30 mins",
+    "cost": "₹35 – ₹55",
+    "from": "Any Location"
   }
 ]

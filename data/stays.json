@@ -25,5 +25,68 @@
     "distance": "1.2 km",
     "price": "₹900 – ₹1400",
     "contact": "+91 99887 66554"
+  },
+ {
+    "city": "bengaluru",
+    "area": "indiranagar",
+    "name": "Indira Comforts",
+    "type": "Hotel",
+    "distance": "1.0 km",
+    "price": "₹1200 – ₹2000",
+    "contact": "+91 98765 43210"
+  },
+  {
+    "city": "bengaluru",
+    "area": "whitefield",
+    "name": "Whitefield Residency",
+    "type": "Hotel",
+    "distance": "1.8 km",
+    "price": "₹1500 – ₹2500",
+    "contact": "+91 99887 55443"
+  },
+  {
+    "city": "bengaluru",
+    "area": "electronic city",
+    "name": "Tech Park Stay",
+    "type": "Hotel",
+    "distance": "2.2 km",
+    "price": "₹1000 – ₹1800",
+    "contact": "+91 91234 56789"
+  },
+  {
+    "city": "bengaluru",
+    "area": "majestic",
+    "name": "City Centre Lodge",
+    "type": "Lodge",
+    "distance": "0.6 km",
+    "price": "₹800 – ₹1300",
+    "contact": "+91 90123 45678"
+  },
+  {
+    "city": "bengaluru",
+    "area": "yelahanka",
+    "name": "North Gate Inn",
+    "type": "Hotel",
+    "distance": "1.5 km",
+    "price": "₹900 – ₹1600",
+    "contact": "+91 88990 11223"
+  },
+  {
+    "city": "bengaluru",
+    "area": "koramangala",
+    "name": "Urban Nest",
+    "type": "Hotel",
+    "distance": "1.1 km",
+    "price": "₹1400 – ₹2300",
+    "contact": "+91 93456 78901"
+  },
+  {
+    "city": "bengaluru",
+    "area": "jayanagar",
+    "name": "Green View Residency",
+    "type": "Hotel",
+    "distance": "0.9 km",
+    "price": "₹1100 – ₹1900",
+    "contact": "+91 97654 32109"
   }
 ]
