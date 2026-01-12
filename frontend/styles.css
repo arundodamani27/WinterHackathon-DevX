@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #0d0d0d;
+  background: #303841;
   min-height: 100vh;
   padding: 20px;
   color: #e0e0e0;
@@ -25,7 +25,7 @@ body {
   font-weight: 700;
   margin-bottom: 10px;
   letter-spacing: 1px;
-  background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+  background: linear-gradient(135deg, #2185D5 0%, #3A4750 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -39,12 +39,12 @@ body {
 }
 
 .search-section {
-  background: #1e1e1e;
+  background: #3A4750;
   max-width: 600px;
   margin: 0 auto 30px;
   padding: 35px;
   border-radius: 16px;
-  border: 1px solid #333333;
+  border: 1px solid rgba(33, 133, 213, 0.2);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
   animation: fadeInUp 0.6s ease-out;
 }
@@ -72,32 +72,32 @@ body {
 .form-group select {
   width: 100%;
   padding: 14px 16px;
-  border: 1px solid #333333;
+  border: 1px solid rgba(33, 133, 213, 0.3);
   border-radius: 10px;
   font-size: 1rem;
   transition: all 0.3s ease;
-  background: #141414;
+  background: #303841;
   color: #e0e0e0;
 }
 
 .form-group input:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #4a4a4a;
-  background: #1e1e1e;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+  border-color: #2185D5;
+  background: #3A4750;
+  box-shadow: 0 0 0 3px rgba(33, 133, 213, 0.1);
 }
 
 .form-group select option {
-  background: #1e1e1e;
+  background: #3A4750;
   color: #e0e0e0;
 }
 
 #findBtn {
   width: 100%;
   padding: 16px;
-  background: #ffffff;
-  color: #0a0a0a;
+  background: #2185D5;
+  color: #ffffff;
   border: none;
   border-radius: 10px;
   font-size: 1.1rem;
@@ -105,13 +105,13 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 10px;
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(33, 133, 213, 0.3);
 }
 
 #findBtn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
-  background: #f0f0f0;
+  box-shadow: 0 6px 20px rgba(33, 133, 213, 0.5);
+  background: #1a6bb8;
 }
 
 #findBtn:active {
@@ -125,44 +125,46 @@ body {
 }
 
 .result-card {
-  background: #1a1a1a;
+  background: #3A4750;
   padding: 30px;
   margin-bottom: 25px;
   border-radius: 16px;
-  border: 1px solid #2a2a2a;
+  border: 1px solid rgba(33, 133, 213, 0.2);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .result-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
-  border-color: #3a3a3a;
+  box-shadow: 0 12px 40px rgba(33, 133, 213, 0.3);
+  border-color: rgba(33, 133, 213, 0.4);
 }
 
 .result-card h3 {
-  color: #ffffff;
+  color: #2185D5;
   margin-bottom: 20px;
   font-size: 1.5rem;
   font-weight: 600;
   padding-bottom: 12px;
-  border-bottom: 1px solid #2a2a2a;
+  border-bottom: 1px solid rgba(33, 133, 213, 0.2);
 }
 
 #stayResults,
-#travelResults {
+#travelResults,
+#restrauntResults {
   color: #b0b0b0;
   line-height: 1.8;
   font-size: 1rem;
 }
 
 #stayResults p,
-#travelResults p {
+#travelResults p,
+#restrauntResults p {
   margin-bottom: 12px;
   padding: 12px;
-  background: #0f0f0f;
+  background: #303841;
   border-radius: 8px;
-  border-left: 3px solid #ffffff;
+  border-left: 3px solid #2185D5;
   color: #d0d0d0;
 }
 
@@ -170,8 +172,8 @@ body {
 .stay-card {
   display: grid;
   grid-template-columns: 240px 1fr;
-  background: #252525;
-  border: 1px solid #3a3a3a;
+  background: rgba(58, 71, 80, 0.6);
+  border: 1px solid rgba(33, 133, 213, 0.3);
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 16px;
@@ -180,8 +182,9 @@ body {
 }
 
 .stay-card:hover {
-  border-color: #4a4a4a;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.08);
+  border-color: #2185D5;
+  box-shadow: 0 4px 20px rgba(33, 133, 213, 0.3);
+  transform: translateY(-2px);
 }
 
 .stay-image {
@@ -189,11 +192,11 @@ body {
   height: 100%;
   min-height: 180px;
   object-fit: cover;
-  background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
+  background: linear-gradient(135deg, #3A4750 0%, #303841 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #505050;
+  color: #2185D5;
   font-size: 3rem;
 }
 
@@ -236,9 +239,9 @@ body {
   align-items: center;
   gap: 6px;
   padding: 4px 10px;
-  background: #1a1a1a;
+  background: #303841;
   border-radius: 6px;
-  border: 1px solid #333333;
+  border: 1px solid rgba(33, 133, 213, 0.3);
 }
 
 .stars {
@@ -259,7 +262,7 @@ body {
   align-items: center;
   gap: 16px;
   padding-top: 16px;
-  border-top: 1px solid #3a3a3a;
+  border-top: 1px solid rgba(33, 133, 213, 0.2);
 }
 
 .stay-meta {
@@ -302,7 +305,7 @@ body {
   top: 12px;
   left: 12px;
   padding: 4px 10px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(33, 133, 213, 0.9);
   color: #ffffff;
   border-radius: 6px;
   font-size: 0.8rem;
@@ -316,8 +319,8 @@ body {
 
 /* Travel Card Styles */
 .travel-card {
-  background: #252525;
-  border: 1px solid #3a3a3a;
+  background: rgba(58, 71, 80, 0.6);
+  border: 1px solid rgba(33, 133, 213, 0.3);
   border-radius: 12px;
   padding: 20px;
   margin-bottom: 12px;
@@ -325,17 +328,18 @@ body {
 }
 
 .travel-card:hover {
-  border-color: #4a4a4a;
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+  border-color: #2185D5;
+  box-shadow: 0 4px 15px rgba(33, 133, 213, 0.2);
+  transform: translateY(-2px);
 }
 
 .travel-mode {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #2185D5;
   margin-bottom: 12px;
   padding-bottom: 12px;
-  border-bottom: 1px solid #2a2a2a;
+  border-bottom: 1px solid rgba(33, 133, 213, 0.2);
 }
 
 .travel-info {
@@ -404,25 +408,25 @@ body {
 .search-box input {
   flex: 1;
   padding: 12px 16px;
-  border: 1px solid #2a2a2a;
+  border: 1px solid rgba(33, 133, 213, 0.3);
   border-radius: 10px;
   font-size: 1rem;
   transition: all 0.3s ease;
-  background: #0f0f0f;
+  background: #303841;
   color: #e0e0e0;
 }
 
 .search-box input:focus {
   outline: none;
-  border-color: #404040;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
-  background: #1a1a1a;
+  border-color: #2185D5;
+  box-shadow: 0 0 0 3px rgba(33, 133, 213, 0.1);
+  background: #3A4750;
 }
 
 .search-box button {
   padding: 12px 24px;
-  background: #ffffff;
-  color: #0a0a0a;
+  background: #2185D5;
+  color: #ffffff;
   border: none;
   border-radius: 10px;
   font-weight: 600;
@@ -433,12 +437,12 @@ body {
 
 .search-box button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-  background: #f0f0f0;
+  box-shadow: 0 4px 15px rgba(33, 133, 213, 0.4);
+  background: #1a6bb8;
 }
 
 #map {
-  border: 1px solid #2a2a2a;
+  border: 1px solid rgba(33, 133, 213, 0.3);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   filter: brightness(0.9) contrast(1.1);
 }
