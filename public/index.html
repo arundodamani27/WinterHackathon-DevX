@@ -20,7 +20,7 @@
     <div class="nav-logo">ExamRoute</div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="#">Add Info</a></li>
+      <li><a href="add.html">Add Info</a></li>
       <li><a href="#">About</a></li>
     </ul>
   </nav>
@@ -41,7 +41,16 @@
     <div class="home-container">
 
       <div class="search-box">
-
+        <!-- Exam Type -->
+        <select id="examTypeSelect">
+          <option value="">Select Exam Type</option>
+          <option value="SSC">SSC</option>
+          <option value="KSP">PUC</option>
+          <option value="CET">CET</option>
+          <option value="NEET">NEET</option>
+          <option value="JEE">JEE</option>
+          <option value="Banking Exam">Banking Exam</option>
+        </select>
         <!-- City -->
         <select id="citySelect">
           <option value="">Select Exam City</option>
@@ -52,19 +61,33 @@
         </select>
 
         <!-- Exam Centre -->
-        <input
-          type="text"
-          id="examCentreInput"
-          placeholder="Enter Exam Centre Name (as per admit card)"
-        />
+        <input type="text" id="examCentreInput" placeholder="Enter Exam Centre Name (as per admit card)" />
 
         <!-- Button -->
         <button id="findBtn">Find Stay & Travel</button>
 
       </div>
 
-      <div class="add-info">
-        <a href="#">+ Add missing stay or travel info</a>
+     
+
+    </div>
+
+    <!-- FEATURES SECTION -->
+    <div class="features-section">
+
+      <div class="feature-card">
+        <h3>🏠 Nearby PGs & Hostels</h3>
+        <p>Find affordable and safe stays close to your exam centre.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>📍 Exact Centre Location</h3>
+        <p>Get accurate exam centre location with map navigation.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>🚌 Local Travel Guide</h3>
+        <p>Know which bus, auto or route to take on exam day.</p>
       </div>
 
     </div>
@@ -90,19 +113,23 @@
   </script>
 
   <!-- BUTTON LOGIC -->
-  <script>
-    document.getElementById("findBtn").addEventListener("click", function () {
-      const city = document.getElementById("citySelect").value;
-      const centre = document.getElementById("examCentreInput").value;
+ <script>
+document.getElementById("findBtn").addEventListener("click", function () {
 
-      if (!city || !centre) {
-        alert("Please select city and enter exam centre name");
-        return;
-      }
+  const examType = document.getElementById("examTypeSelect").value;
+  const city = document.getElementById("citySelect").value;
+  const centre = document.getElementById("examCentreInput").value;
 
-      window.location.href = `result.html?city=${encodeURIComponent(city)}&centre=${encodeURIComponent(centre)}`;
-    });
-  </script>
+  if (!examType || !city || !centre) {
+    alert("Please select exam type, city and enter exam centre name");
+    return;
+  }
+
+  window.location.href = `result.html?exam=${encodeURIComponent(examType)}&city=${encodeURIComponent(city)}&centre=${encodeURIComponent(centre)}`;
+});
+</script>
+
 
 </body>
+
 </html>
