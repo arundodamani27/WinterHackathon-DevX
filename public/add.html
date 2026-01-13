@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Stay Info – ExamRoute</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-logo">ExamRoute</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="add.html" class="active">Add Info</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+</nav>
+
+<div class="main-wrapper">
+
+    <div class="form-container">
+        <h2>Add PG / Hostel Details</h2>
+        <p class="form-subtitle">Help other students by adding nearby stay details</p>
+
+        <form id="stayForm">
+
+            <input type="text" id="name" placeholder="PG / Hostel Name" required>
+            <input type="text" id="city" placeholder="City (e.g. Mangaluru)" required>
+            <input type="text" id="area" placeholder="Area (e.g. Kankanady)" required>
+
+            <select id="type" required>
+                <option value="">Select Type</option>
+                <option value="PG">PG</option>
+                <option value="Hostel">Hostel</option>
+                <option value="Hotel">Hotel</option>
+            </select>
+
+            <input type="number" id="price" placeholder="Price per day (₹)" required>
+            <input type="text" id="distance" placeholder="Distance from exam centre (e.g. 500m)" required>
+            <input type="text" id="phone" placeholder="Contact Number" required>
+            <input type="text" id="mapLink" placeholder="Google Maps Link (optional)">
+
+            <button type="submit">Submit Stay Info</button>
+        </form>
+    </div>
+
+</div>
+
+<!-- Firebase -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyDam8hDxPIK32eA_d6x2HUsryfGcYGEEso",
+        authDomain: "examroute-2c382.firebaseapp.com",
+        projectId: "examroute-2c382",
+        storageBucket: "examroute-2c382.appspot.com",
+        messagingSenderId: "9052235272",
+        appId: "1:9052235272:web:ea06ccdb07a8a6ed093bd"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const form = document.getElementById("stayForm");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const data = {
+            name: document.getElementById("name").value,
+            city: document.getElementById("city").value,
+            area: document.getElementById("area").value,
+            type: document.getElementById("type").value,
+            price: document.getElementById("price").value,
+            distance: document.getElementById("distance").value,
+            phone: document.getElementById("phone").value
+        };
+
+        try {
+            await addDoc(collection(db, "stays"), data);
+            alert("✅ Stay info added successfully!");
+            form.reset();
+        } catch (error) {
+            console.error(error);
+            alert("❌ Error adding data");
+        }
+    });
+</script>
+
+</body>
+</html>
+
+
+
