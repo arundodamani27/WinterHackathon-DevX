@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Travel Info – ExamRoute</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-logo">ExamRoute</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="result.html">Back</a></li>
+    </ul>
+</nav>
+
+<div class="form-page">
+
+    <div class="form-card">
+        <h2>🚌 Add Travel Guide</h2>
+        <p>Help other students by adding correct travel route info.</p>
+
+        <input type="text" id="from" placeholder="From (e.g. Mangaluru Bus Stand)">
+        <input type="text" id="to" placeholder="To (e.g. Bondel Exam Centre)">
+        
+        <select id="mode">
+            <option value="">Select Mode</option>
+            <option value="Bus">Bus</option>
+            <option value="Auto">Auto</option>
+            <option value="Train">Train</option>
+            <option value="Walk">Walk</option>
+        </select>
+
+        <textarea id="details" placeholder="Route details (Bus number, steps, landmarks...)"></textarea>
+
+        <button id="submitTravelBtn">Submit Travel Info</button>
+    </div>
+
+</div>
+
+<!-- FIREBASE + LOGIC -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDam8hDxPIK32eA_d6x2HUsryfGcYGEEso",
+    authDomain: "examroute-2c382.firebaseapp.com",
+    projectId: "examroute-2c382",
+    storageBucket: "examroute-2c382.appspot.com",
+    messagingSenderId: "9052235272",
+    appId: "1:9052235272:web:ea06ccdb07a8a6ed093bd"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// Get params
+const params = new URLSearchParams(window.location.search);
+const city = params.get("city");
+const centre = params.get("centre");
+
+document.getElementById("submitTravelBtn").addEventListener("click", async () => {
+
+    const from = document.getElementById("from").value;
+    const to = document.getElementById("to").value;
+    const mode = document.getElementById("mode").value;
+    const details = document.getElementById("details").value;
+
+    if (!from || !to || !mode || !details) {
+        alert("Please fill all fields");
+        return;
+    }
+
+    try {
+        await addDoc(collection(db, "travel_guides"), {
+            city,
+            centre,
+            from,
+            to,
+            mode,
+            details,
+            status: "pending",   // admin will approve
+            createdAt: new Date()
+        });
+
+        alert("Travel info submitted! Admin will verify.");
+        window.history.back();
+
+    } catch (error) {
+        console.error(error);
+        alert("Error submitting data");
+    }
+
+});
+</script>
+
+</body>
+</html>
