@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Verify PG / Hostel Entries</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<script>
+  const pass = prompt("Enter Admin Password:");
+  if (pass !== "admin123") {
+    alert("Unauthorized access");
+    window.location.href = "index.html";
+  }
+</script>
+
+<div class="admin-page">
+  <div class="admin-container">
+
+    <div class="admin-header">
+      <h1>Admin Dashboard</h1>
+      <p>Verify and approve student submitted PG / Hostel data</p>
+    </div>
+
+    <!-- Pending List Will Load Here -->
+    <div id="pendingList"></div>
+
+  </div>
+</div>
+
+<script type="module" src="admin.js"></script>
+
+</body>
+</html>
